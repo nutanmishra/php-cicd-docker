@@ -21,10 +21,9 @@ pipeline {
                 }
             }
         }
-        stage ("start docker") {
+        stage ("Run docker compose") {
             steps {
-                sh 'make up'
-                sh 'docker compose ps'
+                sh 'sudo docker compose up -d'
             }
         }
     }
