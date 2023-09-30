@@ -40,11 +40,9 @@ pipeline {
 
     post {
         failure {
-            // Notify or perform actions on pipeline failure
             echo 'Pipeline failed!'
         }
         success {
-            // Notify or perform actions on pipeline success
             echo 'Pipeline success!'
         }
     }
