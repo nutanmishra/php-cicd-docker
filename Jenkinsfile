@@ -1,15 +1,5 @@
 pipeline {
     agent any
-
-    environment {
-        PHP_IMAGE = 'php:8.1-fpm'
-        MYSQL_IMAGE = 'mysql:5.7'
-        APP_NAME = 'php-cicd-docker'
-        DB_NAME = 'test'
-        DB_USER = 'root'
-        DB_PASS = '2rD#Ua9Z^Mdy'
-    }
-
     stages {
         stage('Checkout') {
             steps {
