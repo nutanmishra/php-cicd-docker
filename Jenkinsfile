@@ -10,7 +10,10 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Running build phase.'
+                git 'https://github.com/Kennibravo/jenkins-laravel.git'
+                sh 'composer install'
+                sh 'cp .env.example .env'
+                sh 'php artisan key:generate'
             }
         }
 
